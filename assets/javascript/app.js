@@ -23,3 +23,8 @@ var checkAnswers = function(){
     //compare correctAnswers array vs playerAnswers array
 
 }
+
+
+$('#buttons1').on ('click','button', function(){
+   console.log(this.value)
+  });  
