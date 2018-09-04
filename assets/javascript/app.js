@@ -1,11 +1,18 @@
 
 var playerAnswers = [""];
-var correctAnswers = [true];
+var correctAnswers = ["a"];
 
 
 
 //call from click event
-var answerQuestion = function() {
+var answerQuestion = function(event) {
+
+
+    console.log(event.currentTarget.value);
+
+    playerAnswers[event.currentTarget.id] = event.currentTarget.value;
+
+    console.log(playerAnswers)
 
     //click button add add it's value to the playerAnswer array
     //some how record button's question number, to use as index.
@@ -25,6 +32,7 @@ var checkAnswers = function(){
 }
 
 
-$('#buttons1').on ('click','button', function(){
+$('#buttons1').on ('click','button', function(event){
+    answerQuestion(event);
    console.log(this.value)
   });  
